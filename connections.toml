@@ -1,0 +1,24 @@
+[app]
+default_profile = "pg_local"
+
+[profiles.pg_local]
+label = "PostgreSQL Local"
+db_uri = "postgresql+psycopg2://efernamo:efernamo@localhost:5432/inicial_db"
+
+[profiles.oracle_qa]
+label = "Oracle QA"
+db_uri = "oracle+oracledb://usuario:clave@host:1521/?service_name=DB1"
+oracle_mode = "thick"
+oracle_client_lib_dir = "./utils/instantclient_21_20"
+
+[profiles.mysql_dev]
+label = "MySQL Dev"
+db_uri = "mysql+pymysql://usuario:clave@localhost:3306/mi_db"
+
+[profiles.sqlserver_stage]
+label = "SQL Server Stage"
+db_uri = "mssql+pyodbc://usuario:clave@host:1433/mi_db?driver=ODBC+Driver+18+for+SQL+Server&TrustServerCertificate=yes"
+
+[profiles.sqlite_demo]
+label = "SQLite Demo"
+db_uri = "sqlite:///./mi_basedatos.db"
